@@ -1,0 +1,14 @@
+
+//exercicio 2
+val file = sc.textFile("entrada/palavras.txt")
+val words = file.flatMap(line => line.split(" ")).map(word => word)
+val ordenadas = words.sortBy(x=>x,false)
+ordenadas.saveAsTextFile("arquivoOrdenado.txt")
+
+
+//exercicio 3
+sqlContext.sql("create table palavra (word string)")
+sqlContext.sql("LOAD DATA INPATH 'entrada/palavras.txt' OVERWRITE INTO TABLE palavra")
+sqlContext.sql("select * from palavra order by desc")
+sqlContext.sql("select * from palavra order by word desc").show()
+
