@@ -12,5 +12,7 @@ WordCount.java
 
 
 #### arquivo em jar do projeto: 
-sintaxe: hadoop jar WordCountInverso.jar entrada/palavras.txt saida
+#sintaxe: hadoop jar WordCountInverso.jar entrada/palavras.txt saida
 WordCountInverso.jar
+
+
